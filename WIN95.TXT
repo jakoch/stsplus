@@ -1,0 +1,65 @@
+Windows 95/98 Setup for STSPLUS
+-------------------------------
+
+This file contains the recommended steps to load and set up STSPLUS
+on your Win95/98 deskdop. (Suggested by Nicolas Giacona, Melbourne, FL.)
+
+1.  Unpack the distribution files into a new directory called STSPLUS.
+
+2.  Create a shortcut for STSPLUS on your desktop
+    a)  Click on Start
+    b)  Point to Programs
+    c)  Click on Windows Explorer
+    d)  Enable file extensions (OPTIONAL)
+        i)  Click on View
+        ii) Click on Options
+        iii)Uncheck the box marked "Hide MS-DOS file extensions for
+            file types that are registered".
+        iv) Click on OK
+    e)  Create shortcut for STSPLUS on desktop
+        i)  Select the STSPLUS directory
+        ii) Click and hold the RIGHT mouse button on STSPLUS.EXE,
+            then drag to the desktop and release the mouse button.
+        iii)Click on Create Shortcut Here
+
+3.  Right click on the new STSPLUS icon on the desktop
+    a)  Click on Properties
+
+4.  Select Program Tab
+    a)  Check the "Close on exit" box
+    b)  Select Run: "Normal Window"
+    c)  Click on "Change Icon"
+        i)  Click on Browse
+        ii) Select the STSPLUS directory
+        iii)Double click on STSPLUS.ICO
+        iv) Click on OK
+    d)  Click on "Advanced ..."
+        i)  Check the box "Suggest MS-DOS as necessary" and leave both
+            other boxes unchecked.
+        ii) Click on OK
+
+5.  Select Memory Tab
+    a)  Select Conventional memory Total: "Auto" and Initial
+        environment: "Auto"
+    b)  Select Expoanded (EMS) memory Total: "2048"
+    c)  Select Extended (XMS) memory Total: "2048"
+    d)  Select MS-DOS protected-mode (DPMI) memory Total: "Auto"
+
+6.  Select Screen Tab
+    a)  Under Usage, Select "Full-screen"
+    b)  Under Usage, Select Initial size "Default"
+    c)  Uncheck both boxes under Window
+    d)  Check both boxes under Performance
+
+7.  Select Misc Tab
+    a)  Under Foreground, uncheck "Allow screen saver"
+    b)  Under Mouse, leave both boxes unchecked
+    c)  Under Background, leave "Always suspend" unchecked
+    d)  Under Termination, check "Warn if still active"
+    e)  Set Idle sensitivity to the middle of the range
+    f)  Under Other, uncheck "Fast pasting"
+
+8.  Click on Apply, then click on OK to return to desktop
+
+9.  To run STSPLUS, simply double click on the STSPLUS icon
+    on the desktop.

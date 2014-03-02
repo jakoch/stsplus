@@ -1,0 +1,44 @@
+NOTES FOR USE OF STSISS2.ICN SATELLITE ICON FILE
+-----------------------------------------------
+
+1.  File STSISS2.ICN is a satellite icon file for use with STSORBIT PLUS,
+    Version 9517 or higher. It depicts the space shuttle docked on the
+    International Space Station (ISS) following the addition of the
+    Zvezda Service Module.
+
+2.  In order to use STSISS2.ICN, the file must be copied to a new file
+    which has a name of the form "#nnnnn.ICN", where "nnnnn" is the five
+    digit NORAD Number of the space shuttle mission. If the NORAD Number
+    of the space shuttle mission is 26088, then use the following DOS
+    command to create the new icon file:
+
+    COPY STSISS2.ICN #26088.ICN
+
+    The following sample space shuttle 2-line elements illustrate how to
+    determine the NORAD Number. It is the five digit number in positions
+    3 through 7 of the two data lines, "26088" in the sample. Note that
+    the NORAD Number is DIFFERENT for each space shuttle mission!
+
+    STS-99
+    1 26088U 00010A   00053.54300116  .00081214  27207-7  55058-4 0   420
+    2 26088  57.0051 255.5389 0006569 261.7605 310.1436 16.16061691  1752
+
+3.  If ISS 2-line elements are being used instead of space shuttle 2-line
+    elements, use the following DOS command:
+
+    COPY STSISS2.ICN #25544.ICN
+
+    The following sample ISS 2-line elements illustrate the data.
+
+    ISS
+    1 25544U 98067A   00076.54258277  .00051490  00000-0  42557-3 0  4386
+    2 25544  51.5893 254.1381 0007800 293.5725  66.5063 15.69547735 75364
+
+4.  STSORBIT PLUS will automatically select the ICN file if present. Once
+    the space shuttle undocks from ISS, delete the #nnnnn.ICN file created
+    in Step 2 or Step 3 and the satellite icon will return to the internal
+    default icon. Or, to return to the external ISS2.ICN icon (available
+    for download separately), use the following DOS command:
+
+    COPY ISS2.ICN #25544.ICN
+

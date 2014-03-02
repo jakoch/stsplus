@@ -1,0 +1,59 @@
+ þ Visual Basic trappable error codes are:
+ 
+   Code Message
+   ออออ ออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+   1    NEXT without FOR
+   2    Syntax error
+   3    RETURN without GOSUB
+   4    Out of DATA
+   5    Illegal function call
+   6    Overflow
+   7    Out of memory
+   8    Label NOT defined
+   9    Subscript out of range
+   10   Duplicate definition
+   11   Division by zero
+   12   Illegal in direct mode
+   13   TYPE mismatch
+   14   Out of string space
+   16   String formula too complex
+   18   FUNCTION not defined
+   19   No Resume
+   20   Resume without error
+   24   Device timeout
+   25   Device fault
+   26   FOR without NEXT
+   27   Out of paper
+   29   WHILE without WEND
+   30   WEND without WHILE
+   33   Duplicate Label
+   35   SUB or FUNCTION not defined
+   37   Argument-count mismatch
+   38   Array NOT defined
+   40   Variable required
+   50   FIELD overflow
+   51   Internal error
+   52   Bad file name or number
+   53   File NOT found
+   54   Bad file mode
+   55   File already open
+   56   FIELD statement active
+   57   Device I/O error
+   58   File already exists
+   59   Bad record length
+   61   Disk full
+   62   Input past end of file
+   63   Bad record number
+   64   Bad file name
+   67   Too many files
+   68   Device unavailable
+   69   Communication-buffer overflow
+   70   Permission denied
+   71   Disk NOT ready
+   72   Disk-media error
+   73   Feature unavailable
+   74   Can   't rename with different drive
+   75   Path/File access error
+   76   Path NOT found
+   80   Feature removed
+

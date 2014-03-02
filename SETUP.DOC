@@ -1,0 +1,278 @@
+INITIAL STSPLUS SETUP
+---------------------
+
+     This section gives quick instructions for setting up STSORBIT PLUS in 
+a standard configuration. Other methods are possible but this is
+recommended for the first time or novice user.
+
+STSORBIT PLUS is a DOS-based program. For use with Windows 95, click on
+the "Start" button, then select "Programs" and click on "MS-DOS Prompt".
+This will display a DOS prompt like "C:\WINDOWS" and the installation
+instructions which follow may be used. DOS programs run under Windows 95
+do not always perform properly when multitasking is active; if problems
+are encountered, do not run any other programs or tasks while STSPLUS is
+active. The DOS prompt may also be obtained by clicking on the "Start"
+button, then clicking on "Shut Down", and finally clicking on "Restart
+the computer in MS-DOS mode"; this may prove more reliable for some
+systems and disables multitasking.
+
+
+Copying Files for STSORBIT PLUS
+-------------------------------
+
+     STSPLUS is intended to be used on systems with a hard disk. If all 
+files are present, up to 3MB may be required. While it is possible to 
+operate the program from a high density floppy disk (with some files 
+omitted), map drawing times are painfully and unacceptably slow.
+     I recommend that a separate directory called STSPLUS be created for 
+all of the required and optional files. If you do not have such a 
+directory, you may create one with the following DOS commands:
+
+          C:
+          CD \
+          MD STSPLUS
+
+where the hard disk is assumed to be Drive C:. Change the hard disk letter 
+as appropriate for your configuration.
+     If you received the program in compressed, self-extracting .EXE format 
+(with a filename like SOP0123.EXE and/or SOP0123U.EXE), create the STSPLUS
+directory as above then log into the STSPLUS directory and unpack the files 
+with the following DOS commands:
+
+.cp 3
+          C:
+          CD \STSPLUS
+          A:SOP0123
+
+where the floppy drive is assumed to be A:, the hard disk is assumed to be 
+C:, and the subdirectory STSPLUS must already exist. Make any changes 
+appropriate for your configuration, then repeat the last command for each 
+file with filetype .EXE received, changing the command as necessary to 
+reflect the correct filename. 
+     If you received the program in compressed format (.ZIP), copy the .ZIP 
+file(s) to the STSPLUS directory and then enter the DOS command:
+
+          PKUNZIP <filename>
+
+where <filename> is the name of the .ZIP file to unpack. After all files 
+have been unpacked, you may delete the .ZIP files (but keep a backup copy 
+just in case!). You MUST use PKUNZIP Version 2.04G or later to successfully 
+unpack .ZIP files received from my BBS or from NASA SpaceLink BBS!
+
+                           ********************
+                           *  IMPORTANT NOTE  *
+                           ********************
+
+     If you are upgraing from a prior version of STSPLUS and 
+     experience problems, delete the file STSPLUS.INI to force the 
+     program to recreate its initialization parameters! This will 
+     resolve most path and filename problems. Use the "/NEW" command 
+     line option or press Function Keys F7 and F10+F3 from the Main 
+     Menu to set all program paths, filenames, options, and display 
+     features.
+
+
+Executing Program STSORBIT PLUS
+-------------------------------
+
+     STSPLUS is normally distributed on disk and via my RPV Astronomy BBS 
+with a special version of file STSPLUS.INI, the initialization file, which 
+forces certain setup features to be selected. The setup feature may also be 
+enabled by including the "/NEW" command line option when the program is 
+executed from the DOS prompt:
+
+     STSPLUS /NEW
+
+STSPLUS will display its title screen for a few seconds and then notify the 
+user that the new setup features are being processed:
+
+     Program STSPLUS, Version 0123
+
+     STSPLUS has determined that this is a new setup. You will be asked to
+     select your location, enter your UTC Offset and other time information,
+     and to check the files and paths for program operation.
+
+     Press any key to continue ...
+
+Press ENTER (or any key except non-typing keys like SHIFT and CTRL) to 
+continue the setup process.
+     Because many calculations require the user's location, STSPLUS next 
+requests the user to verify and change, if necessary, the current location. 
+The default location is Sedona, Arizona:
+
+     Current PRIMARY Location:      Sedona, AZ
+                                    Latitude:     34.9153 degrees
+                                    Longitude:  -111.7885 degrees
+                                    Elevation:  1311      meters
+     Current active CITYFILE:       STSPLUS.CTY
+
+        F1  Search CITYFILE for PRIMARY location
+        F2  Search CITYFILE for SECONDARY location
+        F3  Enter coordinates for PRIMARY location
+        F4  Enter coordinates for SECONDARY location
+
+        F6  Select TRACKING STN for PRIMARY location
+
+     ENTER  Continue Setup
+
+     Enter desired selection:
+
+     If this is a new setup, press F1 and enter the name of a city
+     close to your location. If the city is not found, try another
+     or press F3 and enter the city name and coordinates. When the
+     information is correct, press ENTER to continue.
+
+If the "/NEW" command line option has been entered and this is a 
+reconfiguration of an existing setup, the primary location which was 
+previously entered will be displayed. Press F1 to search the CITYFILE (a 
+file of some 2000+ cities worldwide) to locate your city or one near you. 
+If your city is not found, try another. If no nearby city can be found, 
+press F3 and enter the city name, latitude (positive is North, negative is 
+South), longitude (positive is East [Europe, Africa, Australia, etc.], 
+negative is West [North and South America, etc.]), and elevation (in 
+meters, or add "F" for feet). Enter "0" for your elevation if it is not 
+known. When the information is correct, press ENTER to continue the setup 
+process.
+     STSPLUS next requests time zone information. STSPLUS must know your 
+"UTC Offset", the difference in hours between your local time zone and UTC 
+or Coordinated Universal Time (formerly known as GMT or Greenwich Mean 
+Time). Using the primary location entered above, STSPLUS will calculate an 
+estimated UTC Offset based upon your longitude; each 15 degrees of 
+longitude represents one hour offset from UTC. Do NOT include the hour for 
+Daylight or Summer time! However, political "adjustments" have caused the
+time zones to not coincide exactly with the 15 degree model, so the 
+estimate could be off by one hour in either direction in some cases. For 
+most users the estimate should be correct. Users whose UTC Offset is not an 
+exact hour difference must always enter the UTC Offset manually. STSPLUS 
+next requests whether you are on Daylight or Summer time; enter "0" if you 
+are on Standard Time and "1" if you are on Daylight or Summer Time. 
+Finally, STSPLUS allows you to select either local time or UTC as the time 
+to which your computer's clock is set; enter "0" for local time and "1" for 
+UTC.
+
+---------------------------------------------------------------------------
+Set UTC TIME ZONE OFFSET and DAYLIGHT FLAG
+
+STSPLUS must know the difference between your local time zone and Universal
+Coordinated Time (UTC), also sometimes known as Greenwich Mean Time (GMT).
+With this information, STSPLUS can automatically adjust launch times and
+dates for your local time zone. In addition, STSORBIT must know if you are
+now on STANDARD or DAYLIGHT (SUMMER) time and if the DOS clock is set to UTC.
+
+First, enter the difference between your STANDARD time zone and UTC in hours.
+Do NOT include the hour for DAYLIGHT time; it will be entered separately.
+STSPLUS will estimate your time zone based upon your local longitude.
+For the United States and Canada, use the following:
+
+  Eastern Standard Time     EST    -5.00
+  Central Standard Time     CST    -6.00
+  Mountain Standard Time    MST    -7.00
+  Pacific Standard Time     PST    -8.00
+
+Enter UTC Offset (hours) [ -7.00]:
+Enter Daylight Flag (0=OFF, 1=ON)  [0]:
+Enter DOS time zone (0=LOCAL, 1=UTC)  [0]:
+---------------------------------------------------------------------------
+
+The prompts and responses shown above are for Arizona which always stays on
+Mountain Standard Time. Most US users must take Daylight Savings Time into
+account during April through October.
+     Because installations can vary considerably as to the names and 
+locations of various required files, STSPLUS next displays the current 
+filename and path settings. For a fresh installation from the standard 
+distribution files, these should be correct; if this is a reconfiguration 
+of a previously configured setup using the "/NEW" command line option, the 
+current information should be correct.
+
+     Select path or filename to set, press ENTER when done:
+
+       F1  Set 2-LINE ELEMENTS path:      [D:\STSPLUS\]
+       F2  Set TRACKING STATION filename: [STSPLUS.TRK]
+       F3  Set MAP DATABASE FILES path:   [D:\STSPLUS\]
+       F4  Set FEATURES LABEL filename:   [STSPLUS.LOC]
+       F5  Set TRAKSTAR path:             [D:\STSPLUS\]
+       F6  Set CITYFILE filename:         [STSPLUS.CTY]
+
+     Enter selection or ENTER:
+
+The sample above shows STSPLUS installed in a directory STSPLUS on Drive 
+D:. Verify each of the items in the list and press the indicated Function 
+Key to make changes. When all information is correct, press ENTER to 
+complete the setup process and go to the STSPLUS Main Menu.
+
+     The following sequence of operations is recommended when STSPLUS is 
+run for the first time:
+
+1.   Make sure all required STSPLUS files are in subdirectory \STSPLUS (or 
+     whatever you named it). In addition to the program files, check that 
+     2-line elements are also available; the file TLEnnn.TXT (where "nnn" 
+     is a number like "679" is usually supplied with STSPLUS) and similar 
+     files are available via BBS or the Internet.
+
+2.   Start STSPLUS with the following command to force configuration:
+
+          STSPLUS /NEW
+
+     STSPLUS will request that the user set the primary location, UTC 
+     Offset, and check all filenames and paths. Enter the appropriate 
+     responses. Examples are shown on the screen and are described above.
+
+3.   Once the Main Menu is displayed, press Function Key F2 to select the 
+     primary satellite you wish to track with STSPLUS. You will be asked to 
+     select a filename (the available files whose filetype is ".TXT" or 
+     ".TLE" are displayed and may be selected using the arrow keys). Type 
+     the filename or press ENTER after selecting a filename. You will then 
+     be asked to select a satellite by name or NORAD number. If you do not 
+     know a specific satellite name, enter "HST" for the Hubble Space 
+     Telescope. (Caution: some TLE files also include "HST Array"; press 
+     the SPACE BAR to continue searching for HST.) The data for the 
+     satellite is displayed; press ENTER to accept the data. STSPLUS will 
+     immediately begin drawing the map.
+
+4.   While the map is displayed you may press ENTER to return to the Main 
+     Menu. Press ESC at the Main Menu to return to the DOS prompt.
+
+5.   STSPLUS is a complex program. Only the most basic and essential 
+     features have been covered in this brief startup list. Please take 
+     time to read the manual with your favorite editor or print the text as 
+     reference material.
+
+
+Using Mission Elappsed Time (MET)
+---------------------------------
+
+     The standard NASA/NORAD 2-line orbital element format does NOT include 
+the launch time or launch date. However, this information is obviously 
+required if Mission Elapsed Time (MET) is to be displayed. That information 
+must therefore be obtained independently and manually entered into STSPLUS. 
+The following steps are required:
+
+1.   Start program STSPLUS (see above).
+
+2.   Load the 2-line elements for the desired satellite using Function Key 
+     F2 on the Main Menu. Press ENTER to return from the ground track 
+     display to the Main Menu.
+
+3.   Press Function Key F5 to enter Launch Time and Launch Date. Enter the 
+     appropriate information. Note that if you enter UTC or GMT Launch Time 
+     (by adding the letter "U" or "G" at the end of the time, upper or 
+     lower case), STSPLUS assumes that the date you enter will also be the 
+     UTC/GMT Launch Date.
+
+4.   The information will be displayed for approval. Press ENTER to accept 
+     the data, or press SPACE BAR to repeat the process.
+
+5.   Once the data have been accepted, press Function Key F5 while the map 
+     is on screen to display Mission Elapsed Time. Press F5 again to return 
+     to Time Elapsed Since Epoch. (Press Function Key F1 for help when the 
+     map is displayed with rectangular projection.) If a launch time and 
+     date have not been entered, the F5 command will have no effect and 
+     Time Since Epoch will always be displayed.
+
+6.   The launch time and launch date will be saved in file STSPLUS.LTD and 
+     need only be entered once unless it must be changed for some reason.
+
+     NOTE: Estimated Pre-Launch 2-Line Elements for the Space Shuttle 
+     always use a "dummy" NORAD Number (such as "99101" for STS-101). Once
+     US Space Command has assigned the actual NORAD Number, the launch time 
+     and date must be re-entered using the correct NORAD number.

@@ -1,0 +1,156 @@
+STSORBIT PLUS Revision History
+------------------------------
+
+     Each released version of STSPLUS uses a four digit revision code such 
+as 0123. The first two digits indicate the year and the second two digits 
+indicate the week of the year. In some cases, an additional letter suffix 
+is added to distinguish changes occurring within the same week or to 
+identify special versions. A partial week at the beginning or end of the 
+year is counted as a full week. Using this method, a year will typically 
+have 53 weeks although it is possible to have 54 weeks in a leap year (1972 
+is an example). The current year-week revision code is shown on the Julian 
+Date display, Display Mode 7, in my program ASTROCLK.
+     This file records the revision history of program STSPLUS through all 
+of the minor twists and turns that usually accompany the evolution of such 
+a complex program. It illustrates the tortuous process of maintaining and 
+refining a program as ideas and problems are reported from every quarter. 
+These notes may also be helpful to users who are upgrading from one version 
+to another to find out what has changed.
+
+                             David H. Ransom, Jr.
+                             e-mail: rans7500@spacelink.nasa.gov
+                             Home Page: http://www.dransom.com
+
+
+
+Version 0123 -- June 2001
+-------------------------
+-This is a minor update to allow pass predictions to be made for satellites 
+with mean motion as low as 1.1 as compared to the previous limit of 1.5.
+-The amateur radio satellite, AMSAT OSCAR 40 with NORAD Number 26609, is 
+one of the latest in a long series of AMSAT satellites. It's highly 
+elliptical orbit has a Mean Motion (as of June 2001) of approximately 1.27. 
+The prior lower limit to make pass predictions using F3 from the Main Menu 
+was a Mean Motion of 1.5. This has been relaxed to a Mean Motion of 1.1.
+-This documentation is essentially unchanged from the previous version.
+
+
+Version 0114 -- April 2001
+--------------------------
+-This is a minor update to remove the internal MIR satellite icons and to 
+increase the maximum size of external satellite icons to 25x25 pixels.
+-With the deorbit of the Russian MIR Space Station in March, 2001, the
+need for internal MIR satellite icons also disappeared. The internal MIR 
+icons have therefore been removed.
+Program STSORBIT PLUS Satellite Orbit Simulation                   Page 187
+
+
+-Because of the increased size and complexity of the International Space 
+Station (ISS), the permissible size of external icons has been increased to 
+25x25 pixels. External icon files are prepared by my program STSICON, 
+available with program registration, and are given filenames with the form 
+"#nnnnn.ICN" for use with STSPLUS. The maximum internal icon size remains 
+21x21 pixels.
+-File ISS25.ICN is provided with this update and is a 25x25 pixel icon of 
+the International Space Station as of April, 2001. Rename this file to 
+#25544.ICN if you wish STSPLUS to use the new, larger icon for ISS.
+-This documentation is essentially unchanged from the previous version.
+
+
+Version 0034 -- August 2000
+---------------------------
+-This is a minor update to update the internal ISS icons and to correct a 
+minor bug.
+-Installed new 21x21 and 15x51 internal icons for the International Space 
+Station to reflect the addition of the Zvezda module.
+-Corrected Orbital Data Display (ALT-F1) of the Elements Epoch, NORAD 
+format, to show the leading zeroes for years 2000 and above.
+-Removed the Gamma Ray Observatory from the standard secondary satellites 
+since that observatory has been deorbited.
+-Added files STSISS2.ICN and STSISS2.NOT, the icon and instructions for the 
+space shuttle docked to ISS, to the standard distribution package.
+-The documentation is essentially unchanged from the previous version.
+
+
+Version 0016 -- April 2000
+--------------------------
+-This is a MINOR UPDATE to improve communications with program STSUPDAT.
+-Added IPC command to allow STSUPDAT to remove the "WAIT" message if no 
+updates are performed.
+-The documentation is essentially unchanged from Version 0012.
+
+
+Version 0012 -- March 2000
+--------------------------
+-This is a MAJOR UPDATE to incorporate Greg Swift's STSUPDAT add-on program 
+to automate the updating of orbital data (TLEs) via the Internet.
+
+                           ********************
+                           *  IMPORTANT NOTE  *
+                           ********************
+STSUPDAT requires a 32-bit operating system, Windows 95/98/NT/2K, as well 
+as an active Internet connection at the time it is executed.
+
+-Documentation only has been updated on 27 March to reflect the release of 
+STSUPDAT Version 0014.
+-Add Function Key F11 and CTRL-F2 to the available keys while the satellite 
+tracking map is displayed. Either of these keys invokes STSUPDAT and allows 
+the automatic updating of TLEs from my websites. See the section "Using 
+STSPLUS with program STSUPDAT by Greg Swift" in the documentation as well Šas the documentation provided with STSUPDAT.
+-To execute program STSUPDAT, LAN operations must be enabled with F10+F1 
+from the STSPLUS Main Menu. LAN operations are disabled by default.
+Program STSORBIT PLUS Satellite Orbit Simulation                   Page 188
+
+
+-STSUPDAT may be downloaded from my STSPLUS Home Page at:
+
+          http://www.dransom.com/stsplus.html
+
+-Corrected coordinates for various locations in files STSPLUS.LOC and 
+STSPLUS.CTY and removed a number of duplicate entries from STSPLUS.CTY. 
+Thanks to Richard Stein for taking the time to figure out the corrections.
+-Because most of the features of my planned program STSLAN have been 
+incorporated in Greg Swift's STSUPDAT, development of STSLAN has been 
+suspended and all references to it removed from the documentation.
+
+
+Version 0005 -- January 2000
+----------------------------
+-This is a MINOR UPDATE to restore the internal link to TRAKSTAR, removed 
+in Version 0002.
+-In coordination with TS Kelso, the incompatibilities between Kelso's 
+program TRAKSTAR and STSPLUS have been resolved with the release of 
+TRAKSTAR Version 2.65. I have therefore restored the internal link which 
+allows users to run TRAKSTAR from STSPLUS. STSPLUS writes file TRAKSTAR.CFG 
+with the required information, including the new UTC Offset format and 
+whether or not Daylight Savings Time is in use. STSPLUS also writes file 
+STSPLUS.OB which contains the user's primary location and coordinates.
+-Note that users MUST execute TRAKSTAR Version 2.65 and not the earlier 
+Version 2.60. TRAKSTAR Version 2.60 will generate a Runtime Error 160 when 
+executed from STSPLUS; the prior release, TRAKSTAR Version 2.15, is not Y2K 
+compatible.
+
+
+Version 0003 -- January 2000
+----------------------------
+-This is a MINOR UPDATE to correct a problem in STSAUX.
+-Version 0002 of the support program STSAUX had a problem with the version 
+number rollover from 9932 to 0002 which caused it to malfunction and 
+display spurious information. This problem has been corrected.
+-Except for the Version number, the documentation is unchanged from Version 
+0002.
+
+
+Version 0002 -- January 2000
+----------------------------
+-This is a MINOR UPDATE to remove the link to TRAKSTAR.
+-Prior releases of STSPLUS have been able to execute TS Kelso's program 
+TRAKSTAR V2.15. In the latter part of 1999, Kelso released TRAKSTAR V2.60 
+to correct a number of Y2K-related problems and to add new features. 
+Unfortunately, TRAKSTAR V2.60 is no longer compatible with STSPLUS and the 
+link, F4 from the STSPLUS Main Menu, has been removed. Users must now 
+execute TRAKSTAR independently of STSPLUS.
+-Updated this documentation to remove all references to TRAKSTAR.
+-Except for the removal of the link to TRAKSTAR, this release is 
+essentially identical to Version 9932.
+
